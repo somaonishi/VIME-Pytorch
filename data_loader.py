@@ -61,11 +61,11 @@ def mnist_to_tabular(x, y):
 def get_dataset(data_name, label_data_rate):
     '''
     input:
-        data_name: データの名前
-        label_data_rate: ラベルデータの割合
+        data_name: str
+        label_data_rate: float
     return:
         labeled dataset, unlabeled dataset, test dataset
-        unlabeled datasetはラベルを含むデータセットだが学習では使わない
+        unlabeled dataset is a dataset that contains labels but is not used for training
     '''
     if data_name == 'iris':
         data = load_iris()
